@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Contributing and reporting issues" href="../../contributing.html" />
+    <link rel="next" title="How to identify time-variable background noise (“rolling bands”)?" href="../2.06-identify-rolling-band.html" />
     <link rel="prev" title="How does the SFF method work?" href="replicate-vanderburg-2014-k2sff.html" /> 
 
   
@@ -89,93 +89,30 @@
               <p class="caption"><span class="caption-text">Getting started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../install.html#requirements">Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../install.html#installing-lightkurve">Installing lightkurve</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../install.html#stable-version">Stable version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../install.html#development-version">Development version</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../install.html#building-documentation">Building documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/targetpixelfile.html">TargetPixelFile classes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/lightcurve.html">LightCurve classes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/lightcurvefile.html">LightCurveFile classes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/correctors.html">Systematics correction classes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/prf.html">PSF photometry classes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utility functions</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../section1.html">Introduction to lightkurve</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../1.02-target-pixel-files.html">What are Target Pixel File objects?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../1.03-what-are-lightcurves.html">What are Light Curve objects?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../1.04-lightcurve-files.html">What are Light Curve File objects?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../1.05-interact-with-lightcurves-and-tpf.html">Interactively inspecting Target Pixel Files and Lightcurves</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../1.05-interact-with-lightcurves-and-tpf.html#Using-.interact()">Using <code class="docutils literal notranslate"><span class="pre">.interact()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../1.05-interact-with-lightcurves-and-tpf.html#Passing-in-a-preprocessed-lightcurve">Passing in a preprocessed lightcurve</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../section2.html">Science with lightkurve</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../2.02-recover-a-planet.html">How to recover a known planet in Kepler data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2.03-appending-lightcurves.html">How to combine lightcurves from different Kepler quarters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2.05-making-custom-apertures.html">How to perform aperture photometry with custom apertures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cutting-out-tpfs-from-tess-ffis.html">How to cut out Target Pixel Files from Kepler Super Stamps or TESS FFIs</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../section1.html">Introduction to lightkurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../section2.html">Science with lightkurve</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../section3.html">Systematics correction using lightkurve</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../2.04-removing-cbvs.html">How to remove common systematics using basis vectors (CBVs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2.01-how-to-detrend.html">How to remove K2 motion systematics with SFF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="replicate-vanderburg-2014-k2sff.html">How does the SFF method work?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="replicate-vanderburg-2014-k2sff.html#Retrieve-the-K2SFF-data-for-ENG-test-source-60021426">Retrieve the K2SFF data for ENG test source <code class="docutils literal notranslate"><span class="pre">60021426</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="replicate-vanderburg-2014-k2sff.html#Manually-reproduce-with-the-Vanderburg-provided-diagnostic-data">Manually reproduce with the Vanderburg-provided diagnostic data</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="replicate-vanderburg-2014-k2sff.html">How does the SFF method work?</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Replicating Vanderburg &amp; Johnson 2014 using lightkurve</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Data-Exclusion">Data Exclusion</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../2.06-identify-rolling-band.html">How to identify time-variable background noise (“rolling bands”)?</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">About lightkurve</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing and reporting issues</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#proposing-changes-to-lightkurve-using-github-pull-requests">Proposing changes to lightkurve using GitHub pull requests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#coding-and-documentation-guidelines">Coding and documentation guidelines</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing and reporting issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../citing.html">Citing and acknowledging lightkurve</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../other_software.html">Other software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#detrending-analysis">Detrending &amp; Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#full-frame-images">Full Frame Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#data-access">Data access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#metadata">Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#planet-search">Planet Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#population-statistics">Population Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#positional">Positional</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#science-astrophysics">Science / Astrophysics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../other_software.html#other">Other</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_software.html">Other software</a></li>
 </ul>
 
             
@@ -195,7 +132,6 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
         
         <div class="rst-content">
@@ -422,21 +358,6 @@ div.nboutput div.output_area.stderr {
     margin-top: -19px;
 }
 
-/* nice headers on first paragraph of info/warning boxes */
-.admonition .first {
-    margin: -12px;
-    padding: 6px 12px;
-    margin-bottom: 12px;
-    color: #fff;
-    line-height: 1;
-    display: block;
-}
-.admonition.warning .first {
-    background: #f0b37e;
-}
-.admonition.note .first {
-    background: #6ab0de;
-}
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
@@ -447,8 +368,8 @@ div.nboutput div.output_area.stderr {
 2014</a> introduced a
 method for “Self Flat Fielding” by tracking how the lightcurve changes
 with motion of the spacecraft.</p>
-<p>We reproduce the publication algorithm in a companion
-notebook, which explains how
+<p>We reproduce the publication algorithm in a <a class="reference internal" href="replicate-vanderburg-2014-k2sff.html"><span class="doc">companion
+notebook</span></a>, which explains how
 the method works, and illustrates some of the python code underlying the
 code we put into <code class="docutils literal notranslate"><span class="pre">lightkurve</span></code>.</p>
 <p>In this notebook we replicate the K2SFF method using only the
@@ -492,8 +413,8 @@ identical performace with published papers.</p>
 </pre></div>
 </div>
 </div>
-<p>We saved the mask for this target in our previous
-notebook, so we can just load
+<p>We saved the mask for this target in <a class="reference internal" href="replicate-vanderburg-2014-k2sff.html"><span class="doc">our previous
+notebook</span></a>, so we can just load
 it directly.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
@@ -720,7 +641,7 @@ convenience functions.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../contributing.html" class="btn btn-neutral float-right" title="Contributing and reporting issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../2.06-identify-rolling-band.html" class="btn btn-neutral float-right" title="How to identify time-variable background noise (“rolling bands”)?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="replicate-vanderburg-2014-k2sff.html" class="btn btn-neutral" title="How does the SFF method work?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -776,9 +697,7 @@ convenience functions.</p>
 
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
 
