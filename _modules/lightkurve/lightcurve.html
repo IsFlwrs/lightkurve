@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>lightkurve.lightcurve &mdash; lightkurve 1.0.a1 documentation</title>
+  <title>lightkurve.lightcurve &mdash; lightkurve 1.0b7 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.0
+                1.0b7
               </div>
             
           
@@ -195,7 +195,7 @@
 <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="LightCurve"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve">[docs]</a><span class="k">class</span> <span class="nc">LightCurve</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve">[docs]</a><span class="k">class</span> <span class="nc">LightCurve</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Implements a simple class for a generic light curve.</span>
 
@@ -310,7 +310,7 @@
             <span class="k">return</span> <span class="n">bkjd_to_astropy_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_format</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_scale</span><span class="p">)</span>
 
-<div class="viewcode-block" id="LightCurve.properties"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.properties">[docs]</a>    <span class="k">def</span> <span class="nf">properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.properties"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.properties">[docs]</a>    <span class="k">def</span> <span class="nf">properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Print out a description of each of the non-callable attributes of a</span>
 <span class="sd">        LightCurve object.</span>
 
@@ -364,7 +364,7 @@
                     <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">output</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">max_lines</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LightCurve.append"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">others</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.append"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">others</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Append LightCurve objects.</span>
 
@@ -395,7 +395,7 @@
                 <span class="n">new_lc</span><span class="o">.</span><span class="n">centroid_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_lc</span><span class="o">.</span><span class="n">centroid_row</span><span class="p">,</span> <span class="n">others</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">centroid_row</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">new_lc</span></div>
 
-<div class="viewcode-block" id="LightCurve.flatten"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.flatten">[docs]</a>    <span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window_length</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">polyorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">return_trend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="LightCurve.flatten"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.flatten">[docs]</a>    <span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window_length</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">polyorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">return_trend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                 <span class="n">break_tolerance</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Removes low frequency trend using scipy&#39;s Savitzky-Golay filter.</span>
@@ -463,7 +463,7 @@
             <span class="k">return</span> <span class="n">flatten_lc</span><span class="p">,</span> <span class="n">trend_lc</span>
         <span class="k">return</span> <span class="n">flatten_lc</span></div>
 
-<div class="viewcode-block" id="LightCurve.fold"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.fold">[docs]</a>    <span class="k">def</span> <span class="nf">fold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.fold"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.fold">[docs]</a>    <span class="k">def</span> <span class="nf">fold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Folds the lightcurve at a specified ``period`` and ``phase``.</span>
 
 <span class="sd">        This method returns a new ``LightCurve`` object in which the time</span>
@@ -492,7 +492,7 @@
                                 <span class="bp">self</span><span class="o">.</span><span class="n">flux</span><span class="p">[</span><span class="n">sorted_args</span><span class="p">],</span>
                                 <span class="n">flux_err</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">flux_err</span><span class="p">[</span><span class="n">sorted_args</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="LightCurve.normalize"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.normalize">[docs]</a>    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.normalize"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.normalize">[docs]</a>    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns a normalized version of the lightcurve.</span>
 
 <span class="sd">        The normalized lightcurve is obtained by dividing `flux` and `flux_err`</span>
@@ -509,7 +509,7 @@
         <span class="n">lc</span><span class="o">.</span><span class="n">flux</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">flux</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmedian</span><span class="p">(</span><span class="n">lc</span><span class="o">.</span><span class="n">flux</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">lc</span></div>
 
-<div class="viewcode-block" id="LightCurve.remove_nans"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.remove_nans">[docs]</a>    <span class="k">def</span> <span class="nf">remove_nans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.remove_nans"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.remove_nans">[docs]</a>    <span class="k">def</span> <span class="nf">remove_nans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Removes cadences where the flux is NaN.</span>
 
 <span class="sd">        Returns</span>
@@ -519,7 +519,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">flux</span><span class="p">)]</span>  <span class="c1"># This will return a sliced copy</span></div>
 
-<div class="viewcode-block" id="LightCurve.remove_outliers"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.remove_outliers">[docs]</a>    <span class="k">def</span> <span class="nf">remove_outliers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.remove_outliers"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.remove_outliers">[docs]</a>    <span class="k">def</span> <span class="nf">remove_outliers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Removes outlier flux values using sigma-clipping.</span>
 
 <span class="sd">        This method returns a new LightCurve object from which flux values</span>
@@ -547,7 +547,7 @@
             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="o">~</span><span class="n">outlier_mask</span><span class="p">],</span> <span class="n">outlier_mask</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="o">~</span><span class="n">outlier_mask</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="LightCurve.bin"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.bin">[docs]</a>    <span class="k">def</span> <span class="nf">bin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.bin"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.bin">[docs]</a>    <span class="k">def</span> <span class="nf">bin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Bins a lightcurve using a function defined by `method`</span>
 <span class="sd">        on blocks of samples of size `binsize`.</span>
 
@@ -608,7 +608,7 @@
 
         <span class="k">return</span> <span class="n">binned_lc</span></div>
 
-<div class="viewcode-block" id="LightCurve.cdpp"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.cdpp">[docs]</a>    <span class="k">def</span> <span class="nf">cdpp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transit_duration</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">savgol_window</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">savgol_polyorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<div class="viewcode-block" id="LightCurve.cdpp"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.cdpp">[docs]</a>    <span class="k">def</span> <span class="nf">cdpp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transit_duration</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">savgol_window</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">savgol_polyorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
              <span class="n">sigma_clip</span><span class="o">=</span><span class="mf">5.</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Estimate the CDPP noise metric using the Savitzky-Golay (SG) method.</span>
 
@@ -673,7 +673,7 @@
         <span class="n">cdpp_ppm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e6</span>
         <span class="k">return</span> <span class="n">cdpp_ppm</span></div>
 
-<div class="viewcode-block" id="LightCurve.plot"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Time - 2454833 (days)&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="LightCurve.plot"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Time - 2454833 (days)&#39;</span><span class="p">,</span>
              <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Normalized Flux&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
              <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;fast&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Plots the light curve.</span>
@@ -739,7 +739,7 @@
             <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ax</span></div>
 
-<div class="viewcode-block" id="LightCurve.to_table"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.to_table">[docs]</a>    <span class="k">def</span> <span class="nf">to_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.to_table"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.to_table">[docs]</a>    <span class="k">def</span> <span class="nf">to_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Export the LightCurve as an AstroPy Table.</span>
 
 <span class="sd">        Returns</span>
@@ -751,7 +751,7 @@
                      <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;flux&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_err&#39;</span><span class="p">),</span>
                      <span class="n">meta</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LightCurve.to_pandas"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.to_pandas">[docs]</a>    <span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;flux&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_err&#39;</span><span class="p">]):</span>
+<div class="viewcode-block" id="LightCurve.to_pandas"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.to_pandas">[docs]</a>    <span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;flux&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_err&#39;</span><span class="p">]):</span>
         <span class="sd">&quot;&quot;&quot;Export the LightCurve as a Pandas DataFrame.</span>
 
 <span class="sd">        Parameters</span>
@@ -781,7 +781,7 @@
         <span class="n">df</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span>
         <span class="k">return</span> <span class="n">df</span></div>
 
-<div class="viewcode-block" id="LightCurve.to_csv"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.to_csv">[docs]</a>    <span class="k">def</span> <span class="nf">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_or_buf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.to_csv"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.to_csv">[docs]</a>    <span class="k">def</span> <span class="nf">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_or_buf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Writes the LightCurve to a csv file.</span>
 
 <span class="sd">        Parameters</span>
@@ -800,7 +800,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">path_or_buf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LightCurve.to_fits"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.LightCurve.to_fits">[docs]</a>    <span class="k">def</span> <span class="nf">to_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_data</span><span class="p">):</span>
+<div class="viewcode-block" id="LightCurve.to_fits"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.LightCurve.html#lightkurve.lightcurve.LightCurve.to_fits">[docs]</a>    <span class="k">def</span> <span class="nf">to_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Writes the KeplerLightCurve to a fits file.</span>
 
 <span class="sd">        Parameters</span>
@@ -926,7 +926,7 @@
         <span class="k">return</span> <span class="n">ax</span>
 
 
-<div class="viewcode-block" id="KeplerLightCurve"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.KeplerLightCurve">[docs]</a><span class="k">class</span> <span class="nc">KeplerLightCurve</span><span class="p">(</span><span class="n">LightCurve</span><span class="p">):</span>
+<div class="viewcode-block" id="KeplerLightCurve"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.KeplerLightCurve.html#lightkurve.lightcurve.KeplerLightCurve">[docs]</a><span class="k">class</span> <span class="nc">KeplerLightCurve</span><span class="p">(</span><span class="n">LightCurve</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Defines a light curve class for NASA&#39;s Kepler and K2 missions.</span>
 
 <span class="sd">    Attributes</span>
@@ -937,8 +937,10 @@
 <span class="sd">        Data flux for every time point</span>
 <span class="sd">    flux_err : array-like</span>
 <span class="sd">        Uncertainty on each flux data point</span>
-<span class="sd">    centroid_col, centroid_row : array-like, array-like</span>
-<span class="sd">        Centroid column and row coordinates as a function of time</span>
+<span class="sd">    centroid_col : array-like</span>
+<span class="sd">        Centroid column coordinates as a function of time</span>
+<span class="sd">    centroid_row : array-like</span>
+<span class="sd">        Centroid row coordinates as a function of time</span>
 <span class="sd">    quality : array-like</span>
 <span class="sd">        Array indicating the quality of each data point</span>
 <span class="sd">    quality_bitmask : int</span>
@@ -991,7 +993,7 @@
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">mission</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;k2&#39;</span><span class="p">:</span>
             <span class="k">return</span><span class="p">(</span><span class="s1">&#39;KeplerLightCurve(EPIC: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keplerid</span><span class="p">))</span>
 
-<div class="viewcode-block" id="KeplerLightCurve.correct"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.KeplerLightCurve.correct">[docs]</a>    <span class="k">def</span> <span class="nf">correct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;sff&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="KeplerLightCurve.correct"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.KeplerLightCurve.html#lightkurve.lightcurve.KeplerLightCurve.correct">[docs]</a>    <span class="k">def</span> <span class="nf">correct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;sff&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Corrects a lightcurve for motion-dependent systematic errors.</span>
 
 <span class="sd">        Parameters</span>
@@ -1025,7 +1027,7 @@
         <span class="n">new_lc</span><span class="o">.</span><span class="n">flux_err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span><span class="o">.</span><span class="n">flux_err</span><span class="p">[</span><span class="n">not_nan</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">new_lc</span></div>
 
-<div class="viewcode-block" id="KeplerLightCurve.to_pandas"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.KeplerLightCurve.to_pandas">[docs]</a>    <span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;flux&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_err&#39;</span><span class="p">,</span> <span class="s1">&#39;quality&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="KeplerLightCurve.to_pandas"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.KeplerLightCurve.html#lightkurve.lightcurve.KeplerLightCurve.to_pandas">[docs]</a>    <span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;flux&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_err&#39;</span><span class="p">,</span> <span class="s1">&#39;quality&#39;</span><span class="p">,</span>
                                  <span class="s1">&#39;centroid_col&#39;</span><span class="p">,</span> <span class="s1">&#39;centroid_row&#39;</span><span class="p">]):</span>
         <span class="sd">&quot;&quot;&quot;Export the LightCurve as a Pandas DataFrame.</span>
 
@@ -1043,7 +1045,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">KeplerLightCurve</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="KeplerLightCurve.to_fits"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.KeplerLightCurve.to_fits">[docs]</a>    <span class="k">def</span> <span class="nf">to_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_data</span><span class="p">):</span>
+<div class="viewcode-block" id="KeplerLightCurve.to_fits"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.KeplerLightCurve.html#lightkurve.lightcurve.KeplerLightCurve.to_fits">[docs]</a>    <span class="k">def</span> <span class="nf">to_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Export the KeplerLightCurve as an astropy.io.fits object.</span>
 
 <span class="sd">        Parameters</span>
@@ -1083,7 +1085,7 @@
                                                      <span class="o">**</span><span class="n">extra_data</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="TessLightCurve"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.TessLightCurve">[docs]</a><span class="k">class</span> <span class="nc">TessLightCurve</span><span class="p">(</span><span class="n">LightCurve</span><span class="p">):</span>
+<div class="viewcode-block" id="TessLightCurve"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.TessLightCurve.html#lightkurve.lightcurve.TessLightCurve">[docs]</a><span class="k">class</span> <span class="nc">TessLightCurve</span><span class="p">(</span><span class="n">LightCurve</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Defines a light curve class for NASA&#39;s TESS mission.</span>
 
 <span class="sd">    Attributes</span>
@@ -1129,7 +1131,7 @@
         <span class="k">return</span><span class="p">(</span><span class="s1">&#39;TessLightCurve(TICID: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ticid</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="iterative_box_period_search"><a class="viewcode-back" href="../../api/lightcurve.html#lightkurve.lightcurve.iterative_box_period_search">[docs]</a><span class="k">def</span> <span class="nf">iterative_box_period_search</span><span class="p">(</span><span class="n">lc</span><span class="p">,</span> <span class="n">niters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_period</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">max_period</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<div class="viewcode-block" id="iterative_box_period_search"><a class="viewcode-back" href="../../api/lightkurve.lightcurve.iterative_box_period_search.html#lightkurve.lightcurve.iterative_box_period_search">[docs]</a><span class="k">def</span> <span class="nf">iterative_box_period_search</span><span class="p">(</span><span class="n">lc</span><span class="p">,</span> <span class="n">niters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">min_period</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">max_period</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
                                 <span class="n">nperiods</span><span class="o">=</span><span class="mi">501</span><span class="p">,</span> <span class="n">period_scale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Implements a routine to find box-like transit events.</span>
@@ -1285,7 +1287,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.a1',
+            VERSION:'1.0b7',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
